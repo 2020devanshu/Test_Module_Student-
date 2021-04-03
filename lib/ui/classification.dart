@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:student_app/ui/constants.dart';
 
-class MatchTheFollowing extends StatefulWidget {
+class Classification extends StatefulWidget {
   @override
-  _MatchTheFollowingState createState() => _MatchTheFollowingState();
+  _ClassificationState createState() => _ClassificationState();
 }
 
-class _MatchTheFollowingState extends State<MatchTheFollowing> {
+class _ClassificationState extends State<Classification> {
   int radioValue = 0;
   double _finalResult = 0.0;
   bool ins = false;
@@ -325,8 +325,263 @@ class _MatchTheFollowingState extends State<MatchTheFollowing> {
               SizedBox(
                 height: 10,
               ),
+              Container(
+                width: MediaQuery.of(context).size.width*0.9,
+                height: 220,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Container(
+                          width: MediaQuery.of(context).size.width*0.4,
+                          height: 90,
+                          decoration: BoxDecoration(
+                            color: kLightColor,
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Padding(
+                            padding: EdgeInsets.only(
+                                left: MediaQuery.of(context).size.width * 0.05,
+                                right: MediaQuery.of(context).size.width * 0.05,
+                            ),                        child: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Sedimentary",
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    decoration: TextDecoration.none,
+                                    fontWeight: FontWeight.w600,
+                                    color: kBlackColor,
+                                  ),
+                                ),
+                                TextFormField(
+                                  maxLines: 2,
+                                  cursorColor: kGreyColor,
+                                  decoration: InputDecoration(
+                                    labelText: "Answer ",
+                                    labelStyle: TextStyle(
+                                        color: kGreyColor,
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w400),
+                                    fillColor: kLightColor,
+                                    hintStyle: TextStyle(
+                                        color: kGreyColor,
+                                        fontSize: 10,
+                                        fontWeight: FontWeight.w400),
+                                    enabledBorder: UnderlineInputBorder(
+                                      borderSide: BorderSide(color: kLightColor),
+                                    ),
+                                    focusedBorder: UnderlineInputBorder(
+                                      borderSide: BorderSide(color: kLightColor),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
 
+                        ),Container(
+                          width: MediaQuery.of(context).size.width*0.4,
+                          height: 90,
+                          decoration: BoxDecoration(
+                            color: kLightColor,
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Padding(
+                            padding: EdgeInsets.only(
+                                left: MediaQuery.of(context).size.width * 0.05,
+                                right: MediaQuery.of(context).size.width * 0.05,
+                            ),                        child: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Sedimentary",
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    decoration: TextDecoration.none,
+                                    fontWeight: FontWeight.w600,
+                                    color: kBlackColor,
+                                  ),
+                                ),
+                                TextFormField(
+                                  maxLines: 2,
+                                  cursorColor: kGreyColor,
+                                  decoration: InputDecoration(
+                                    labelText: "Answer ",
+                                    labelStyle: TextStyle(
+                                        color: kGreyColor,
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w400),
+                                    fillColor: kLightColor,
+                                    hintStyle: TextStyle(
+                                        color: kGreyColor,
+                                        fontSize: 10,
+                                        fontWeight: FontWeight.w400),
+                                    enabledBorder: UnderlineInputBorder(
+                                      borderSide: BorderSide(color: kLightColor),
+                                    ),
+                                    focusedBorder: UnderlineInputBorder(
+                                      borderSide: BorderSide(color: kLightColor),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Container(
+                          width: MediaQuery.of(context).size.width*0.4,
+                          height: 90,
+                          decoration: BoxDecoration(
+                            color: kLightColor,
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Padding(
+                            padding: EdgeInsets.only(
+                              left: MediaQuery.of(context).size.width * 0.05,
+                              right: MediaQuery.of(context).size.width * 0.05,
+                            ),                        child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Sedimentary",
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  decoration: TextDecoration.none,
+                                  fontWeight: FontWeight.w600,
+                                  color: kBlackColor,
+                                ),
+                              ),
+                              TextFormField(
+                                maxLines: 2,
+                                cursorColor: kGreyColor,
+                                decoration: InputDecoration(
+                                  labelText: "Answer ",
+                                  labelStyle: TextStyle(
+                                      color: kGreyColor,
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w400),
+                                  fillColor: kLightColor,
+                                  hintStyle: TextStyle(
+                                      color: kGreyColor,
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.w400),
+                                  enabledBorder: UnderlineInputBorder(
+                                    borderSide: BorderSide(color: kLightColor),
+                                  ),
+                                  focusedBorder: UnderlineInputBorder(
+                                    borderSide: BorderSide(color: kLightColor),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          ),
+
+                        ),Container(
+                          width: MediaQuery.of(context).size.width*0.4,
+                          height: 90,
+                          decoration: BoxDecoration(
+                            color: kLightColor,
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Padding(
+                            padding: EdgeInsets.only(
+                              left: MediaQuery.of(context).size.width * 0.05,
+                              right: MediaQuery.of(context).size.width * 0.05,
+                            ),                        child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Sedimentary",
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  decoration: TextDecoration.none,
+                                  fontWeight: FontWeight.w600,
+                                  color: kBlackColor,
+                                ),
+                              ),
+                              TextFormField(
+                                maxLines: 2,
+                                cursorColor: kGreyColor,
+                                decoration: InputDecoration(
+                                  labelText: "Answer ",
+                                  labelStyle: TextStyle(
+                                      color: kGreyColor,
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w400),
+                                  fillColor: kLightColor,
+                                  hintStyle: TextStyle(
+                                      color: kGreyColor,
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.w400),
+                                  enabledBorder: UnderlineInputBorder(
+                                    borderSide: BorderSide(color: kLightColor),
+                                  ),
+                                  focusedBorder: UnderlineInputBorder(
+                                    borderSide: BorderSide(color: kLightColor),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          ),
+
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              Expanded(
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                    itemCount: 5,
+                    itemBuilder: (BuildContext context, int index){
+                  return Column(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(
+                          left: MediaQuery.of(context).size.width * 0.05,
+                          right: MediaQuery.of(context).size.width * 0.0,
+                        ),
+                        child: Container(
+                          // width: MediaQuery.of(context).size.width*0.3,
+                          height: 30,
+                          decoration: BoxDecoration(
+                            color: kPrimaryColor,
+                            borderRadius: BorderRadius.circular(20)
+                          ),
+                          child: Center(
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text(
+                                "Granodiorite",
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  decoration: TextDecoration.none,
+                                  fontWeight: FontWeight.w600,
+                                  color: kWhiteColor,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  );
+                }),
+              ),
 
               ins==false?GestureDetector(
                 onTap: (){
