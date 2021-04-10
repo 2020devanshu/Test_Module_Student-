@@ -758,7 +758,7 @@ class _StartTestState extends State<StartTest> {
                                   ),
                                   Icon(
                                     Icons.star,
-                                    color: kPrimaryColor,
+                                    color: Colors.yellow[600],
                                   )
                                 ],
                               )

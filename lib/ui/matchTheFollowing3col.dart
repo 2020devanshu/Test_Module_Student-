@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:student_app/ui/constants.dart';
 
-class FillInTHeBlanks extends StatefulWidget {
-
+class MatchTheFol3Col extends StatefulWidget {
   @override
-  _FillInTHeBlanksState createState() => _FillInTHeBlanksState();
+  _MatchTheFol3ColState createState() => _MatchTheFol3ColState();
 }
 
-class _FillInTHeBlanksState extends State<FillInTHeBlanks> {
-
+class _MatchTheFol3ColState extends State<MatchTheFol3Col> {
   int radioValue = 0;
   double _finalResult = 0.0;
   bool ins = false;
@@ -18,7 +16,22 @@ class _FillInTHeBlanksState extends State<FillInTHeBlanks> {
       radioValue = value;
     });
   }
-
+  List or1 = [
+    "A",
+    "B",
+    "C",
+    "D"
+  ];List or2 = [
+    "a",
+    "b",
+    "c",
+    "d"
+  ];List or3 = [
+    "1",
+    "2",
+    "3",
+    "4"
+  ];
   void showDialog1() {
     final orientation = MediaQuery.of(context).orientation;
 
@@ -161,15 +174,15 @@ class _FillInTHeBlanksState extends State<FillInTHeBlanks> {
                                 height: 60,
                                 width: 60,
                                 decoration: BoxDecoration(
-                                  color: Colors.green,
-                                  borderRadius: BorderRadius.circular(100),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      blurRadius: 1,
-                                      spreadRadius: 0.5,
-                                      color: kPrimaryColor
-                                    )
-                                  ]
+                                    color: Colors.green,
+                                    borderRadius: BorderRadius.circular(100),
+                                    boxShadow: [
+                                      BoxShadow(
+                                          blurRadius: 1,
+                                          spreadRadius: 0.5,
+                                          color: kPrimaryColor
+                                      )
+                                    ]
                                 ),
                                 child: Center(
                                   child: Text(
@@ -322,7 +335,7 @@ class _FillInTHeBlanksState extends State<FillInTHeBlanks> {
                   right: MediaQuery.of(context).size.width * 0.05,),
                 child: Container(
                   width: MediaQuery.of(context).size.width*0.9,
-                  height: 150,
+                  height: 50,
                   decoration: BoxDecoration(
                       color: kLightColor
 
@@ -349,12 +362,9 @@ class _FillInTHeBlanksState extends State<FillInTHeBlanks> {
                               ),
                             ), Container(
                               width: MediaQuery.of(context).size.width*0.7,
-                              height: 120,
+
                               child: Text(
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. _________ "
-                                    "vivamus in diam eu, volutpat. Non pharetra urna, id nisl, gravida convallis augue velit lectus. "
-                                    "Tellus feugiat suscipit eget facilisis turpis sed quam nam."
-                                    " Potenti non quis nibh vitae, feugiat. Sed non sagittis arcu auctor facilisis elementum sit.",
+                                "Match the capital cities",
                                 style: TextStyle(
                                   fontSize: 12,
                                   decoration: TextDecoration.none,
@@ -372,8 +382,249 @@ class _FillInTHeBlanksState extends State<FillInTHeBlanks> {
                   ),
                 ),
               ),
+              SizedBox(
+                height: 20,
+              ),
+              Container(
+                width: MediaQuery.of(context).size.width*0.99,
+                height: 200,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Container(
+                      width: MediaQuery.of(context).size.width*0.3,
+                      child: Column(
+                        children: [
+                          Expanded(
+                            child: ListView.builder(
+                              itemCount: 4,
+                              itemBuilder: (BuildContext context, int index){
+                                return Padding(
+                                  padding: EdgeInsets.only(
+                                    top: 8.0,
+                                    bottom: 8.0,
+                                    left: MediaQuery.of(context).size.width*0.03,
+                                    right: MediaQuery.of(context).size.width*0.03,
+                                  ),
+                                  child: Container(
+                                    child: Row(
+                                      children: [
+                                        Text(
+                                          "${or1[index]}",
+                                          style: TextStyle(
+                                            fontSize: 12,
+                                            decoration: TextDecoration.none,
+                                            fontWeight: FontWeight.w400,
+                                            color: kBlackColor,
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Container(
+                                          decoration: BoxDecoration(
+                                              borderRadius: BorderRadius.circular(10),
+                                              color: kLightColor
+                                          ),
+                                          child: Padding(
+                                            padding: EdgeInsets.only(
+                                              top: 8.0,
+                                              bottom: 8.0,
+                                              left: MediaQuery.of(context).size.width*0.03,
+                                              right: MediaQuery.of(context).size.width*0.03,
+                                            ),
+                                            child: Center(
+                                              child:  Text(
+                                                "India",
+                                                style: TextStyle(
+                                                  fontSize: 12,
+                                                  decoration: TextDecoration.none,
+                                                  fontWeight: FontWeight.w400,
+                                                  color: kBlackColor,
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+
+                                  ),
+                                );
+
+                              },),),
+                        ],
+                      ),
+                    ),Container(
+                      width: MediaQuery.of(context).size.width*0.3,
+                      child: Column(
+                        children: [
+                          Expanded(
+                            child: ListView.builder(
+                              itemCount: 4,
+                              itemBuilder: (BuildContext context, int index){
+                                return Padding(
+                                  padding: EdgeInsets.only(
+                                    top: 8.0,
+                                    bottom: 8.0,
+                                    left: MediaQuery.of(context).size.width*0.03,
+                                    right: MediaQuery.of(context).size.width*0.03,
+                                  ),
+                                  child: Container(
+                                    child: Row(
+                                      children: [
+                                        Text(
+                                          "${or2[index]}",
+                                          style: TextStyle(
+                                            fontSize: 12,
+                                            decoration: TextDecoration.none,
+                                            fontWeight: FontWeight.w400,
+                                            color: kBlackColor,
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Container(
+                                          decoration: BoxDecoration(
+                                              borderRadius: BorderRadius.circular(10),
+                                              color: kLightColor
+                                          ),
+                                          child: Padding(
+                                            padding: EdgeInsets.only(
+                                              top: 8.0,
+                                              bottom: 8.0,
+                                              left: MediaQuery.of(context).size.width*0.03,
+                                              right: MediaQuery.of(context).size.width*0.03,
+                                            ),
+                                            child: Center(
+                                              child:  Text(
+                                                "India",
+                                                style: TextStyle(
+                                                  fontSize: 12,
+                                                  decoration: TextDecoration.none,
+                                                  fontWeight: FontWeight.w400,
+                                                  color: kBlackColor,
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+
+                                  ),
+                                );
+
+                              },),),
+                        ],
+                      ),
+                    ),Container(
+                      width: MediaQuery.of(context).size.width*0.3,
+                      child: Column(
+                        children: [
+                          Expanded(
+                            child: ListView.builder(
+                              itemCount: 4,
+                              itemBuilder: (BuildContext context, int index){
+                                return Padding(
+                                  padding: EdgeInsets.only(
+                                    top: 8.0,
+                                    bottom: 8.0,
+                                    left: MediaQuery.of(context).size.width*0.03,
+                                    right: MediaQuery.of(context).size.width*0.03,
+                                  ),
+                                  child: Container(
+                                    child: Row(
+                                      children: [
+                                        Text(
+                                          "${or3[index]}",
+                                          style: TextStyle(
+                                            fontSize: 12,
+                                            decoration: TextDecoration.none,
+                                            fontWeight: FontWeight.w400,
+                                            color: kBlackColor,
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Container(
+                                          decoration: BoxDecoration(
+                                              borderRadius: BorderRadius.circular(10),
+                                              color: kLightColor
+                                          ),
+                                          child: Padding(
+                                            padding: EdgeInsets.only(
+                                              top: 8.0,
+                                              bottom: 8.0,
+                                              left: MediaQuery.of(context).size.width*0.03,
+                                              right: MediaQuery.of(context).size.width*0.03,
+                                            ),
+                                            child: Center(
+                                              child:  Text(
+                                                "India",
+                                                style: TextStyle(
+                                                  fontSize: 12,
+                                                  decoration: TextDecoration.none,
+                                                  fontWeight: FontWeight.w400,
+                                                  color: kBlackColor,
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+
+                                  ),
+                                );
+
+                              },),),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
               Expanded(
-                child: Container(),
+                child: ListView.builder(
+                    itemCount: 2,
+                    itemBuilder: (BuildContext context, int index){
+                      return Container(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Text(
+                              "${or1[index]}",
+                              style: TextStyle(
+                                fontSize: 12,
+                                decoration: TextDecoration.none,
+                                fontWeight: FontWeight.w400,
+                                color: kBlackColor,
+                              ),
+                            ),
+                            Radio<int>(value: index, groupValue: radioValue, onChanged: handleRadioValueChanged,
+                              activeColor: Colors.lightGreen,),
+                            Container(
+                              width: MediaQuery.of(context).size.width*0.6,
+                              height: 40,
+                              decoration: BoxDecoration(
+                                  border: Border.all(
+                                      color: kBlackColor,
+                                      width: 0.5
+                                  ),
+                                  borderRadius: BorderRadius.circular(5)
+                              ),
+                              child: Row(children: [Expanded(child: TextFormField())]),
+                            )
+                          ],
+                        ),
+                      );
+                    }),
               ),
 
               ins==false?GestureDetector(

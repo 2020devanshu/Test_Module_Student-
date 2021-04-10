@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:student_app/ui/constants.dart';
 
-class MatchTheFollowing extends StatefulWidget {
+class DragAndDrop extends StatefulWidget {
   @override
-  _MatchTheFollowingState createState() => _MatchTheFollowingState();
+  _DragAndDropState createState() => _DragAndDropState();
 }
 
-class _MatchTheFollowingState extends State<MatchTheFollowing> {
+class _DragAndDropState extends State<DragAndDrop> {
   int radioValue = 0;
   double _finalResult = 0.0;
   bool ins = false;
@@ -17,6 +17,8 @@ class _MatchTheFollowingState extends State<MatchTheFollowing> {
     });
   }
   void showDialog1() {
+    final orientation = MediaQuery.of(context).orientation;
+
     showGeneralDialog(
       barrierLabel: "Barrier",
       barrierDismissible: true,
@@ -144,6 +146,45 @@ class _MatchTheFollowingState extends State<MatchTheFollowing> {
                         ],
                       ),
                     ),
+                    Expanded(
+                      child: GridView.builder(
+                        itemCount: 10,
+                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: (orientation == Orientation.portrait) ? 4 : 3),
+                        itemBuilder: (BuildContext context, int index) {
+                          return Column(
+                            children: [
+                              Container(
+                                height: 60,
+                                width: 60,
+                                decoration: BoxDecoration(
+                                    color: Colors.green,
+                                    borderRadius: BorderRadius.circular(100),
+                                    boxShadow: [
+                                      BoxShadow(
+                                          blurRadius: 1,
+                                          spreadRadius: 0.5,
+                                          color: kPrimaryColor
+                                      )
+                                    ]
+                                ),
+                                child: Center(
+                                  child: Text(
+                                    "Q${index+1}",
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      decoration: TextDecoration.none,
+                                      fontWeight: FontWeight.w600,
+                                      color: kWhiteColor,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          );
+                        },
+                      ),
+                    ),
                     Text(
                       "1h 5m left",
                       style: TextStyle(
@@ -153,6 +194,9 @@ class _MatchTheFollowingState extends State<MatchTheFollowing> {
                         color: kBlackColor,
                       ),
                     ),
+                    SizedBox(
+                      height: 20,
+                    )
                   ],
                 ),
               )),
@@ -275,7 +319,7 @@ class _MatchTheFollowingState extends State<MatchTheFollowing> {
                   right: MediaQuery.of(context).size.width * 0.05,),
                 child: Container(
                   width: MediaQuery.of(context).size.width*0.9,
-                  height: 50,
+                  // height: 70,
                   decoration: BoxDecoration(
                       color: kLightColor
 
@@ -284,7 +328,8 @@ class _MatchTheFollowingState extends State<MatchTheFollowing> {
                     padding: EdgeInsets.only(
                         left: MediaQuery.of(context).size.width * 0.05,
                         right: MediaQuery.of(context).size.width * 0.05,
-                        top: 20
+                        top: 20,
+                        bottom: 20,
                     ),
                     child: Column(
                       children: [
@@ -304,7 +349,9 @@ class _MatchTheFollowingState extends State<MatchTheFollowing> {
                               width: MediaQuery.of(context).size.width*0.7,
 
                               child: Text(
-                                "Match the capital cities",
+                                "One                    someone dropped something into Trony’s             "
+                                    "and surprisingly it wasn’t"
+                               " a              of  hney.",
                                 style: TextStyle(
                                   fontSize: 12,
                                   decoration: TextDecoration.none,
@@ -323,11 +370,73 @@ class _MatchTheFollowingState extends State<MatchTheFollowing> {
                 ),
               ),
               SizedBox(
-                height: 10,
+                height: 20,
               ),
+              Container(
+                width: MediaQuery.of(context).size.width*0.9,
+                child: Text(
+                  "Options.",
+                  style: TextStyle(
+                    fontSize: 14,
+                    decoration: TextDecoration.none,
+                    fontWeight: FontWeight.w500,
+                    color: kBlackColor,
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Container(
+                height: 60,
+                child: Row(
+                  children: [
+                    Expanded(
 
-
-
+                      child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: 3,
+                        itemBuilder: (BuildContext context, int index){
+                          return Padding(
+                            padding: EdgeInsets.only(
+                              top: 8.0,
+                              bottom: 8.0,
+                              left: MediaQuery.of(context).size.width*0.05,
+                              right: MediaQuery.of(context).size.width*0.03,
+                            ),                            child: Container(
+                              height: 40,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(5),
+                                color: kLightColor
+                              ),
+                              child: Padding(
+                                padding: EdgeInsets.only(
+                                    top: 8.0,
+                                    bottom: 8.0,
+                                    left: MediaQuery.of(context).size.width*0.03,
+                                    right: MediaQuery.of(context).size.width*0.03,
+                                ),
+                                child: Center(
+                                  child:  Text(
+                                    "Morning",
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      decoration: TextDecoration.none,
+                                      fontWeight: FontWeight.w500,
+                                      color: kBlackColor,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          );
+                        },
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Expanded(child: Container()),
               ins==false?GestureDetector(
                 onTap: (){
                   setState(() {
